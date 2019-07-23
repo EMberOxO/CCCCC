@@ -1,7 +1,7 @@
 #include <stdio.h>
 #define true 1
 #define false 0
-int nu(int num) //ÊÇ·ñËØÊı
+int nu(int num) //æ˜¯å¦ç´ æ•°
 {
 	int i;
 	for(i=2;i<num;i++)
@@ -22,19 +22,21 @@ int main(void)
 	int a;
 	int b;
 	int i;
-	printf("ÇëÊäÈëÒ»¸öÅ¼Êı:");
-	scanf("%d",&a);
-	if(a%2!=0)
-	{
-		printf("ÊäÈëµÄÊı²»ÊÇÅ¼Êı");
-		return 0;
-	}
-	for(i=1;i<a;i+=2)
-	{
-		if(nu(i),nu(b))
+	while(1){
+		printf("è¯·è¾“å…¥ä¸€ä¸ªå¶æ•°:");
+		scanf("%d",&a);
+		if(a%2!=0)
 		{
-		b=a-i;
-		printf("%d+%d=%d\n",b,a-b,a);
+			printf("è¾“å…¥çš„æ•°ä¸æ˜¯å¶æ•°");
+			return 0;
+		}
+		for(i=1;i<a;i+=2)
+		{
+			if(nu(i) && nu(a-i))
+			{
+			b=a-i;
+			printf("%d+%d=%d\n",b,a-b,a);
+			}
 		}
 	}
 	return 0;
