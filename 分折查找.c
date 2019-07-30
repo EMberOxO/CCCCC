@@ -8,20 +8,20 @@ int main(void)
 	int flag = 0;
 	while (1) {
 		int mid = min-(max - min) / 2;
-		printf("ÄãµÄÊý > = <  (Ð¡ÓÚ¾ÍÊä1£¬´óÓÚ¾ÍÊä-1£¬µÈÓÚ¾ÍÊä0) %d %d %d \n",mid,max,min);
+		printf("ä½ çš„æ•° > = <  (å°äºŽå°±è¾“1ï¼Œå¤§äºŽå°±è¾“-1ï¼Œç­‰äºŽå°±è¾“0) %d %d %d \n",mid,max,min);
 		scanf("%s",&buf);
 		flag=atoi (buf);
-//		printf("flag=%d\n",flag); ¾À´íÓÃµÄ
+//		printf("flag=%d\n",flag); çº é”™ç”¨çš„
 		step++;
 		if (flag==0) {
-			printf("ÕÒµ½%d",mid);
+			printf("æ‰¾åˆ°%d",mid);
 			break;
-		} else if (flag>0) {// ÓÃ»§Êý<»úÆ÷Êý
+		} else if (flag>0) {// ç”¨æˆ·æ•°<æœºå™¨æ•°
 				max = mid-1;
 		} else  {
 				min = mid+1;
 		}
 	}
-	printf("¹²%d²½",step);
+	printf("å…±%dæ­¥",step);
 	return 0;
 }
