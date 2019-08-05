@@ -1,14 +1,4 @@
 #include<reg52.h>
-
-sbit LED0=P1^0;
-sbit LED1=P1^1;
-sbit LED2=P1^2;
-sbit LED3=P1^3;
-sbit LED4=P1^4;
-sbit LED5=P1^5;
-sbit LED6=P1^6;
-sbit LED7=P1^7;
-
 void light()
 {
 	int i=0;
@@ -16,43 +6,41 @@ void light()
 	}
 }
 
-
 void main(void)
 {
+	
 while(1)
 	{
-LED0=0;
+P1=0xfe;//11111110
 light();
-LED0=1;
+P1=0xfd;//11111101
 light();
-LED1=0;
+P1=0xfb;//11111011
 light();
-LED1=1;
-light();
-LED2=0;
-light();
-LED2=1;
-light();
-LED3=0;
-light();
-LED3=1;
-light();
-LED4=0;
-light();
-LED4=1;
-light();
-LED5=0;
-light();
-LED5=1;
-light();
-LED6=0;
-light();
-LED6=1;
-light();
-LED7=0;
-light();
-LED7=1;
+P1=0xf7;//11110111
 light();
 
+P1=0xef;//11101111
+light();
+P1=0xdf;//11011111
+light();
+P1=0xbf;//10111111
+light();
+P1=0x7f;//01111111
+light();
+
+P1=0xbf;//10111111
+light();
+P1=0xdf;//11011111
+light();
+P1=0xef;//11101111
+light();
+
+P1=0xf7;//11110111
+light();
+P1=0xfb;//11111011
+light();
+P1=0xfd;//11111101
+light();
 	}
 }
